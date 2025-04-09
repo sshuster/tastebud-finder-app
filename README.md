@@ -1,73 +1,86 @@
-# Welcome to your Lovable project
 
-## Project info
+# TasteBud Finder
 
-**URL**: https://lovable.dev/projects/50889277-7443-4501-b408-17b9c9d3da31
+TasteBud Finder is a web application that helps users discover restaurants that match their taste preferences and dietary restrictions.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- User authentication (register, login, logout)
+- Personalized restaurant recommendations based on user preferences
+- Filtering restaurants by cuisine, dietary options, and price range
+- User dashboard with recommendation analytics
+- Admin dashboard for user management
+- Responsive design for all devices
 
-**Use Lovable**
+## Technology Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/50889277-7443-4501-b408-17b9c9d3da31) and start prompting.
+### Frontend
+- React
+- TypeScript
+- TanStack Query
+- Tailwind CSS
+- Recharts for data visualization
+- React Router for navigation
 
-Changes made via Lovable will be committed automatically to this repo.
+### Backend
+- Flask (Python)
+- SQLite for database
+- JWT for authentication
 
-**Use your preferred IDE**
+## Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Running the Frontend
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. Install dependencies:
 
-Follow these steps:
+```bash
+npm install
+```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2. Start the development server:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at http://localhost:8080
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Running the Backend
 
-**Use GitHub Codespaces**
+1. Navigate to the backend directory:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+cd backend
+```
 
-## What technologies are used for this project?
+2. Install Python dependencies:
 
-This project is built with:
+```bash
+pip install -r requirements.txt
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+3. Run the Flask application:
 
-## How can I deploy this project?
+```bash
+python app.py
+```
 
-Simply open [Lovable](https://lovable.dev/projects/50889277-7443-4501-b408-17b9c9d3da31) and click on Share -> Publish.
+The server will start at http://localhost:5000
 
-## Can I connect a custom domain to my Lovable project?
+## Mock Users
 
-Yes it is!
+For testing purposes, two mock users are available:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1. **Standard User**
+   - Username: muser
+   - Password: muser
+   - Role: user
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+2. **Administrator**
+   - Username: mvc
+   - Password: mvc
+   - Role: admin
+
+## API Integration
+
+The frontend includes a mock mode that works without the backend, using data stored in `src/data/mockData.ts`. To use the actual backend API, modify the authentication context and data fetching functions to use the Flask endpoints.
